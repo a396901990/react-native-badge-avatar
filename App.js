@@ -4,24 +4,43 @@ import {
   Text,
   View
 } from 'react-native';
-import Avatar from './App/Avatar';
+import Avatar from 'react-native-badge-avatar';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Avatar 
-          size="120"
-          borderWidth={3}
-          borderColor="blue"
-          name="John Doe"
-          radius={0.2}
-          url="https://dummyimage.com/100x100/000/fff"
-          badge="6"
-          badgeIcon={require('./images/test.png')}
+        <Avatar
+          size="68"
+          name="Dean Guo"
         />
+
+        <Avatar
+          size="80"
+          name="Dean Guo"
+          url="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          badge="6"
+        />
+
+        <Avatar
+          size="100"
+          name="Dean Guo"
+          radius={0.2}
+          url="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          badge="6"
+          badgeIcon={require('./images/badge_icon.png')}
+        />
+
+        <Avatar
+          size="120"
+          borderColor="black"
+          borderWidth={3}
+          name="Dean Guo"
+          url="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+        />
+
       </View >
-    );
+    )
 
   }
 }

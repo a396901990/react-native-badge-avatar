@@ -1,0 +1,24 @@
+{
+  "name": "react-native-badge-avatar",
+  "version": "1.0.0",
+  "description": "avatar component with badge number, badge icon, name, icon, border, radius…",
+  "main": "Avatar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a396901990/react-native-badge-avatar.git"
+  },
+  "keywords": [
+    "react-native",
+    "badge",
+    "avatar"
+  ],
+  "author": "Dean Guo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a396901990/react-native-badge-avatar/issues"
+  },
+  "homepage": "https://github.com/a396901990/react-native-badge-avatar#readme"
+}

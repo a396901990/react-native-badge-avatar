@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import BadgeView from './BadgeView';
-import UserAvatar from './UserAvatar';
+import BadgeView from './Component/BadgeView';
+import UserAvatar from './Component/UserAvatar';
 
 export default class Avatar extends Component {
 
