@@ -1,7 +1,7 @@
 {
   "name": "react-native-badge-avatar",
-  "version": "1.0.0",
-  "description": "avatar component with badge number, badge icon, name, icon, border, radius…",
+  "version": "1.0.1",
+  "description": "react native avatar component support badge number, badge icon, name, icon, border, radius…",
   "main": "Avatar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,11 @@
   "keywords": [
     "react-native",
     "badge",
-    "avatar"
+    "react native badge",
+    "react-native-badge",
+    "avatar",
+    "react native avatar",
+    "react-native-avatar"
   ],
   "author": "Dean Guo",
   "license": "ISC",
