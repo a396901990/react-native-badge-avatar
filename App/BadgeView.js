@@ -17,7 +17,7 @@ class BadgeView extends Component {
         badgeIcon: null,
         badgeTextColor: 'white',
         badgeBackgroundColor: 'red',
-        badgeSize: 20,
+        badgeSize: 0,
     };
 
 

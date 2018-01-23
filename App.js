@@ -1,38 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import UserAvatar from './App/UserAvatar';
-import Badge from './App/Badge';
 import {
-  Platform,
   StyleSheet,
   Text,
   View
 } from 'react-native';
-
-import BadgeView from './App/BadgeView';
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Avatar from './App/Avatar';
 
 export default class App extends Component<{}> {
   render() {
     return (
-
       <View style={styles.container} >
-        <BadgeView parentView={
-          <UserAvatar size="80" name="John Doe" src="https://dummyimage.com/100x100/000/fff" />
-        } badgeText={"3"} badgeSize={90} badgeIcon={require('./images/test.png')} />
-
+        <Avatar 
+          size="120"
+          borderWidth={3}
+          borderColor="blue"
+          name="John Doe"
+          radius={0.2}
+          url="https://dummyimage.com/100x100/000/fff"
+          badge="6"
+          badgeIcon={require('./images/test.png')}
+        />
       </View >
     );
+
   }
 }
 
@@ -42,15 +32,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });

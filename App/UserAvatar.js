@@ -34,8 +34,10 @@ export default class UserAvatar extends Component {
       fontDecrease,
       size,
       style,
+      borderColor,
+      borderWidth,
       defaultName,
-      radius = 0.5
+      radius,
     } = this.props;
 
     if (!fontDecrease) fontDecrease = 2.5;
@@ -52,7 +54,9 @@ export default class UserAvatar extends Component {
     const borderRadius = size * radius;
 
     const imageStyle = {
-      borderRadius
+      borderRadius,
+      borderColor: 'transparent',
+      borderWidth: 0,
     };
 
     const innerStyle = {
@@ -66,6 +70,11 @@ export default class UserAvatar extends Component {
     if (size) {
       imageStyle.width = innerStyle.width = size;
       imageStyle.height = innerStyle.height = size;
+    }
+
+    if (borderWidth) {
+      imageStyle.borderColor = innerStyle.borderColor = borderColor
+      imageStyle.borderWidth = innerStyle.borderWidth = borderWidth
     }
 
     let inner, classes;
