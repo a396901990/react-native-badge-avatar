@@ -4,8 +4,10 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-native-badge-avatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-badge-avatar)
 
 A user avatar display with support:
+* default place holder
 * name as Avatar
 * url as Avatar
+* onPress event callback
 * Avatar border
 * Avatar border color
 * Avatar radius
@@ -28,12 +30,28 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
         <Avatar
           size="68"
           name="Dean Guo"
+          style={{margin:6}}
+          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
+          placeHolder={require('./images/badge_icon.png')}
+          onPress={ () => 
+            alert('click')
+          }
+        />
+
+        <Avatar
+          size="68"
+          name="Dean Guo"
+          style={{margin:6}}
+          source={require('./images/badge_icon.png')}
+          onPress={ () => 
+            alert('click')
+          }
         />
 
         <Avatar
           size="80"
           name="Dean Guo"
-          url="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
           badge="6"
         />
 
@@ -41,7 +59,7 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
           size="100"
           name="Dean Guo"
           radius={0.2}
-          url="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
           badge="6"
           badgeIcon={require('./images/badge_icon.png')}
         />
@@ -51,15 +69,17 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
           borderColor="black"
           borderWidth={3}
           name="Dean Guo"
-          url="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
         />
 ```
 
 ## Prop
 |Prop|Type|Required|Default|Comment|
 |:----:|:---:|:---:|:---:|:----:|
-|name|string|required|""|if no url will show name as Avatar|
-|url|string|optional|""|Avatar Image url|
+|name|string|optional|""|if no url will show name as Avatar|
+|source|object|optional|null|Avatar Image object same like default use|
+|placeHolder|object|optional|null|Avatar Image placeholder object same like default use|
+|onPress()|function|optional|null|Press event callback|
 |size|string|optional|"48"|Size of Avatar, badge will be 1/4 of Avatar size|
 |radius|int|optional|1| range of 0-1, 0 is rect, 1 is full circular|
 |borderColor|string|optional|""|avatar border color|
@@ -68,4 +88,5 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
 |badgeIcon|string|optional|""|badge icon url|
 |badgeTextColor|string|optional|white|badge text color|
 |badgeBackgroundColor|string|optional|red|badge backgroud color|
+|style|object|optional|null|compontent style same like default use|
 
