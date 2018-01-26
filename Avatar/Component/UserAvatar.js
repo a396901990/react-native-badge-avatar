@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Image, Text } from 'react-native';
 import initials from 'initials';
 import contrast from 'contrast';
-
+import PlaceHolderImage from './PlaceHolderImage';
 // from https://flatuicolors.com/
 const defaultColors = [
   '#2ecc71', // emerald
@@ -24,6 +24,7 @@ function sumChars(str) {
 }
 
 export default class UserAvatar extends Component {
+
   render() {
     let {
       src,
@@ -36,13 +37,15 @@ export default class UserAvatar extends Component {
       style,
       borderColor,
       borderWidth,
-      defaultName,
+      placeHolder,
+      defaultName = ' ',
+      defaultSource = require('./avatar_default.png'),
       radius,
-    } = this.props;
+    } = this.props; 
 
     if (!fontDecrease) fontDecrease = 2.5;
 
-    if (!name) throw new Error('Avatar requires a name');
+    if (!name && !src) throw new Error('Avatar requires a name or url source');
 
     if(typeof size !== 'number') size = parseInt(size);
 
@@ -50,6 +53,8 @@ export default class UserAvatar extends Component {
     if(!abbr) abbr = defaultName;
 
     if(isNaN(radius)) radius = 0.5
+    
+    if(!placeHolder) placeHolder = defaultSource
 
     const borderRadius = size * radius;
 
@@ -82,10 +87,11 @@ export default class UserAvatar extends Component {
 
       const props = {
         style: imageStyle,
-        source: {uri: src}
+        source: src,
+        placeHolder: placeHolder,
       }
 
-      inner = React.createElement( this.props.component || Image, props )
+      inner = React.createElement( this.props.component || PlaceHolderImage, props )
 
     } else {
       let background;
