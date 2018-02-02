@@ -45,7 +45,10 @@ export default class UserAvatar extends Component {
 
     if (!fontDecrease) fontDecrease = 2.5;
 
-    if (!name && !src) throw new Error('Avatar requires a name or url source');
+    // if (!name && !src) throw new Error('Avatar requires a name or url source');
+    if (!name) {
+      name = defaultName
+    }
 
     if(typeof size !== 'number') size = parseInt(size);
 
