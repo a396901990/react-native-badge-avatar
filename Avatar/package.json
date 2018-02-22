@@ -1,6 +1,6 @@
 {
   "name": "react-native-badge-avatar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react native avatar component support badge number, badge icon, name, icon, border, default placeholder, radius…",
   "main": "Avatar.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/a396901990/react-native-badge-avatar.git"
   },
   "dependencies": {
-    "contrast": "^1.0.1",
-    "initials": "^2.1.5"
+    "initials": "^2.1.5",
+    "prop-types": "^15.6.0"
   },
   "keywords": [
     "react-native",

@@ -1,8 +1,6 @@
-'use strict';
-
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ImageBackground, Image, View } from 'react-native';
+import React from "react";
+import PropTypes from "prop-types";
+import { ImageBackground, Image, View } from "react-native";
 
 export default class PlaceHolderImage extends React.Component {
   static propTypes = {
@@ -18,13 +16,16 @@ export default class PlaceHolderImage extends React.Component {
   state = { showPlaceholder: true };
 
   onLoad() {
-    this.props.hidePlaceholderOnLoad && this.setState({ showPlaceholder: false });
+    this.props.hidePlaceholderOnLoad &&
+      this.setState({ showPlaceholder: false });
     this.props.onLoad && this.props.onLoad();
   }
 
   renderImage() {
     if (this.props.source) {
       return <Image {...this.props} onLoad={this.onLoad.bind(this)} />;
+    } else {
+      return null;
     }
   }
 

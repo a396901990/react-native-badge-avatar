@@ -15,8 +15,8 @@ export default class App extends Component {
           size="68"
           name="Dean Guo"
           style={{margin:6}}
-          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          placeHolder={require('./images/badge_icon.png')}
+          // source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
+          // placeHolder={require('./images/badge_icon.png')}
           onPress={ () => 
             alert('click')
           }
@@ -26,7 +26,7 @@ export default class App extends Component {
           size="68"
           name="Dean Guo"
           style={{margin:6}}
-          source={require('./images/badge_icon.png')}
+          // source={require('./images/badge_icon.png')}
           onPress={ () => 
             alert('click')
           }
