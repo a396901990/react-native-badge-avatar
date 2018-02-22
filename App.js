@@ -12,44 +12,42 @@ export default class App extends Component {
     return (
       <View style={styles.container} >
         <Avatar
-          size="68"
+          size={68}
           name="Dean Guo"
           style={{margin:6}}
-          // source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          // placeHolder={require('./images/badge_icon.png')}
           onPress={ () => 
             alert('click')
           }
         />
 
         <Avatar
-          size="68"
+          size={68}
           name="Dean Guo"
           style={{margin:6}}
-          // source={require('./images/badge_icon.png')}
+          source={require('./images/badge_icon.png')}
           onPress={ () => 
             alert('click')
           }
         />
 
         <Avatar
-          size="80"
+          size={80}
           name="Dean Guo"
           source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          badge="6"
+          badge={6}
         />
 
         <Avatar
-          size="100"
+          size={100}
           name="Dean Guo"
           radius={0.2}
           source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          badge="6"
+          badge={6}
           badgeIcon={require('./images/badge_icon.png')}
         />
 
         <Avatar
-          size="120"
+          size={120}
           borderColor="black"
           borderWidth={3}
           name="Dean Guo"

@@ -5,13 +5,16 @@ import UserAvatar from "./Component/UserAvatar";
 import PropTypes from "prop-types";
 export default class Avatar extends Component {
   static propTypes = {
-    badgeIcon: PropTypes.object,
+    badgeIcon: PropTypes.number,
     badgeTextColor: PropTypes.string,
     badgeBackgroundColor: PropTypes.string,
     badge: PropTypes.number,
     name: PropTypes.string.isRequired,
-    source: PropTypes.object,
-    placeHolder: PropTypes.object,
+    source: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.number,
+    ]),
+    placeHolder: PropTypes.number,
     size: PropTypes.number,
     radius: PropTypes.number,
     borderColor: PropTypes.string,

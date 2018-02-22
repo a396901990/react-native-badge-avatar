@@ -27,19 +27,18 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
 ## Usage
 
 ```js
+       <View style={styles.container} >
         <Avatar
-          size="68"
+          size={68}
           name="Dean Guo"
           style={{margin:6}}
-          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          placeHolder={require('./images/badge_icon.png')}
           onPress={ () => 
             alert('click')
           }
         />
 
         <Avatar
-          size="68"
+          size={68}
           name="Dean Guo"
           style={{margin:6}}
           source={require('./images/badge_icon.png')}
@@ -49,41 +48,43 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
         />
 
         <Avatar
-          size="80"
+          size={80}
           name="Dean Guo"
           source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          badge="6"
+          badge={6}
         />
 
         <Avatar
-          size="100"
+          size={100}
           name="Dean Guo"
           radius={0.2}
           source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          badge="6"
+          badge={6}
           badgeIcon={require('./images/badge_icon.png')}
         />
 
         <Avatar
-          size="120"
+          size={120}
           borderColor="black"
           borderWidth={3}
           name="Dean Guo"
           source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
         />
+
+      </View >
 ```
 
 ## Prop
 |Prop|Type|Required|Default|Comment|
 |:----:|:---:|:---:|:---:|:----:|
 |name|string|optional|""|if no url will show name as Avatar|
-|source|object|optional|null|Avatar Image object same like default use|
-|placeHolder|object|optional|null|Avatar Image placeholder object same like default use|
+|source|object, number|optional|null|Avatar Image object same like default use|
+|placeHolder|number|optional|null|Avatar Image placeholder object same like default use|
 |onPress()|function|optional|null|Press event callback|
-|size|string|optional|"48"|Size of Avatar, badge will be 1/4 of Avatar size|
-|radius|int|optional|1| range of 0-1, 0 is rect, 1 is full circular|
-|borderColor|string|optional|""|avatar border color|
-|borderWidth|int|optional|0|avatar border width|
+|size|number|optional|48|Size of Avatar, badge will be 1/4 of Avatar size|
+|radius|number|optional|1| range of 0-1, 0 is rect, 1 is full circular|
+|borderColor|string|optional||avatar border color|
+|borderWidth|number|optional|0|avatar border width|
 |badge|string|optional|""|badge number|
 |badgeIcon|string|optional|""|badge icon url|
 |badgeTextColor|string|optional|white|badge text color|

@@ -3,7 +3,6 @@ import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import initials from "initials";
 import PlaceHolderImage from "./PlaceHolderImage";
-import { Images } from "../../Themes";
 
 // from https://flatuicolors.com/
 const defaultColors = [
@@ -26,10 +25,13 @@ function sumChars(str) {
 
 export default class UserAvatar extends Component {
   static propTypes = {
-    source: PropTypes.object,
+    source: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.number,
+    ]),
     name: PropTypes.string.isRequired,
     textColor: PropTypes.string,
-    placeHolder: PropTypes.object,
+    placeHolder: PropTypes.number,
     size: PropTypes.number,
     radius: PropTypes.number,
     borderColor: PropTypes.string,
