@@ -9,12 +9,9 @@ export default class Avatar extends Component {
     badgeTextColor: PropTypes.string,
     badgeBackgroundColor: PropTypes.string,
     badge: PropTypes.number,
-    name: PropTypes.string.isRequired,
-    source: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.number,
-    ]),
-    placeHolder: PropTypes.number,
+    name: PropTypes.string,
+    source: PropTypes.string,
+    placeholder: PropTypes.number,
     size: PropTypes.number,
     radius: PropTypes.number,
     borderColor: PropTypes.string,
@@ -28,9 +25,6 @@ export default class Avatar extends Component {
     badgeTextColor: "white",
     badgeBackgroundColor: "red",
     badge: 0,
-    name: "",
-    source: null,
-    placeHolder: null,
     size: 48,
     radius: 1,
     borderColor: "",
@@ -54,7 +48,7 @@ export default class Avatar extends Component {
               name={this.props.name}
               radius={this.props.radius / 2}
               source={this.props.source}
-              placeHolder={this.props.placeHolder}
+              placeholder={this.props.placeholder}
             />
           }
           badgeText={this.props.badge}

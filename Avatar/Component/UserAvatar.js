@@ -25,13 +25,10 @@ function sumChars(str) {
 
 export default class UserAvatar extends Component {
   static propTypes = {
-    source: PropTypes.oneOfType([
-      PropTypes.object,
-      PropTypes.number,
-    ]),
-    name: PropTypes.string.isRequired,
+    source: PropTypes.string,
+    name: PropTypes.string,
     textColor: PropTypes.string,
-    placeHolder: PropTypes.number,
+    placeholder: PropTypes.number,
     size: PropTypes.number,
     radius: PropTypes.number,
     borderColor: PropTypes.string,
@@ -40,23 +37,19 @@ export default class UserAvatar extends Component {
 
   static defaultProps = {
     source: null,
-    name: " ",
+    name: "",
     textColor: "#fff",
     colors: defaultColors,
     fontDecrease: 2.5,
     size: 48,
     radius: 0.5,
-    placeHolder: require("./avatar_default.png"),
+    placeholder: require("./avatar_default.png"),
     style: null,
     borderColor: "",
     borderWidth: 0
   };
 
   render() {
-    if (!this.props.name && !this.props.source) {
-      throw new Error("Avatar requires a name or url source");
-    }
-
     let abbr = initials(this.props.name);
 
     const borderRadius = this.props.size * this.props.radius;
@@ -85,19 +78,19 @@ export default class UserAvatar extends Component {
       imageStyle.borderWidth = innerStyle.borderWidth = this.props.borderWidth;
     }
 
+    // priority: source > name > placeholder
     let inner;
     if (this.props.source) {
       const props = {
         style: imageStyle,
-        source: this.props.source,
-        placeHolder: this.props.placeHolder
+        source: { url: this.props.source },
+        placeHolder: this.props.placeholder
       };
-
       inner = React.createElement(
         this.props.component || PlaceHolderImage,
         props
       );
-    } else {
+    } else if (this.props.name) {
       // pick a deterministic color from the list
       let i = sumChars(this.props.name) % this.props.colors.length;
       let background = this.props.colors[i];
@@ -113,12 +106,10 @@ export default class UserAvatar extends Component {
           {abbr}
         </Text>
       );
+    } else {
+      inner = <Image style={imageStyle} source={this.props.placeholder} />;
     }
 
-    return (
-      <View>
-        <View style={[innerStyle, this.props.style]}>{inner}</View>
-      </View>
-    );
+    return <View style={[innerStyle, this.props.style]}>{inner}</View>;
   }
 }
