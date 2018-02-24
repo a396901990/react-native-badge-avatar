@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import PropTypes from "prop-types";
 import initials from "initials";
 import PlaceHolderImage from "./PlaceHolderImage";
@@ -43,7 +43,7 @@ export default class UserAvatar extends Component {
     fontDecrease: 2.5,
     size: 48,
     radius: 0.5,
-    placeholder: require("./avatar_default.png"),
+    placeholder: require('./avatar_default.png'),
     style: null,
     borderColor: "",
     borderWidth: 0

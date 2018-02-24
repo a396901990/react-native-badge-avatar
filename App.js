@@ -16,7 +16,6 @@ export default class App extends Component {
 
         <Avatar
           size={68}
-          name="Dean Guo"
           style={{ margin: 6 }}
           placeholder={require("./images/badge_icon.png")}
           onPress={() => alert("click")}
