@@ -27,49 +27,42 @@ Based on: https://github.com/Samoy/react-native-badge-view, https://github.com/a
 ## Usage
 
 ```js
-        <Avatar
-          size="68"
+     <Avatar
+          size={68}
           name="Dean Guo"
-          style={{margin:6}}
-          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          placeHolder={require('./images/badge_icon.png')}
-          onPress={ () => 
-            alert('click')
-          }
+          style={{ margin: 6 }}
+          onPress={() => alert("click")}
         />
 
         <Avatar
-          size="68"
-          name="Dean Guo"
-          style={{margin:6}}
-          source={require('./images/badge_icon.png')}
-          onPress={ () => 
-            alert('click')
-          }
+          size={68}
+          style={{ margin: 6 }}
+          placeholder={require("./images/badge_icon.png")}
+          onPress={() => alert("click")}
         />
 
         <Avatar
-          size="80"
+          size={80}
           name="Dean Guo"
-          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          badge="6"
+          source="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          badge={6}
         />
 
         <Avatar
-          size="100"
+          size={100}
           name="Dean Guo"
           radius={0.2}
-          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
-          badge="6"
-          badgeIcon={require('./images/badge_icon.png')}
+          source="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
+          badge={6}
+          badgeIcon={require("./images/badge_icon.png")}
         />
 
         <Avatar
-          size="120"
+          size={120}
           borderColor="black"
           borderWidth={3}
           name="Dean Guo"
-          source={{url : "https://avatars3.githubusercontent.com/u/8385255?s=460&v=4" }}
+          source="https://avatars3.githubusercontent.com/u/8385255?s=460&v=4"
         />
 ```
 
