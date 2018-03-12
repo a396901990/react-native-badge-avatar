@@ -1,6 +1,6 @@
 {
   "name": "react-native-badge-avatar",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "react native avatar component support badge number, badge icon, name, icon, border, default placeholder, radius…",
   "main": "Avatar.js",
   "scripts": {

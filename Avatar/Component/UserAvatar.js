@@ -83,7 +83,7 @@ export default class UserAvatar extends Component {
     if (this.props.source) {
       const props = {
         style: imageStyle,
-        source: { url: this.props.source },
+        source: { uri: this.props.source },
         placeHolder: this.props.placeholder
       };
       inner = React.createElement(
